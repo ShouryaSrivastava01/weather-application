@@ -71,9 +71,9 @@ console.log("loading javascript")
        <div class="details" data-id=${i}>
        <div id="day-weather">
                 
-                 <img src="morning.png" alt="morning-icon"/>
+                 <img src="assets/morning.png" alt="morning-icon"/>
                  <span> ${parseInt(temp.day)}</span>
-                 <img src="moon.png" alt="night-icon"/>
+                 <img src="/assets/moon.png" alt="night-icon"/>
                  <span> ${parseInt(temp.night)}</span>
 
                  <img src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="icon"/>
