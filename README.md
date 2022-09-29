@@ -29,7 +29,14 @@ To display weather forecast of upcoming 7 days/ week
 
 Firstly, 🍴 fork the responsitory.
 
+## Option 1
 1. Read the issues thoroughly.
 2. Pick an issue and try to resolve it.
 3. Submit Pull Request. 
 [Note: While submitting PR do add comments and workflow used to resolve the issue]
+
+## Option 2 
+1. Visit the web page of the repo 
+2. find some bugs 🐜
+3. create a new issue and work on it.
+4. submit the PR.
