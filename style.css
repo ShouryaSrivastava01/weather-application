@@ -1,13 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: 100vh;
     margin: 0%;
     font-size: x-large;
     font-family:'open sans',sans-serif;
     background-color:bisque ;
     background-image:url("./img.jpg") ;
+}
+.header{
+    display: flex;
+    align-items: center;
+    background-color: #b6f3f5;
+    font-family: 'Press Start 2P', cursive;
+}
+.header-logo{
+    height: 50px;
+    margin-right: 20px;
+    margin-left: 40px;
+}
+.weather-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    border-bottom: 1px solid black;
 }
 .card{
     padding: 2em;
