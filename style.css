@@ -26,7 +26,6 @@ body{
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    border-bottom: 1px solid black;
 }
 .card{
     padding: 2em;
@@ -124,4 +123,11 @@ button:hover{
 }
 .details img{
     height: 50px;
+}
+footer{
+    border-top: 1px solid black;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #f2dfc9;
 }
