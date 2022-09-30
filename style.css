@@ -13,10 +13,22 @@ body{
 .header{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #b6f3f5;
     font-family: 'Press Start 2P', cursive;
 }
+.header-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .header-logo{
+    height: 50px;
+    margin-right: 20px;
+    margin-left: 40px;
+}
+.header-github-logo,
+.header-github-logo img{
     height: 50px;
     margin-right: 20px;
     margin-left: 40px;
