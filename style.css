@@ -7,7 +7,7 @@ body{
     margin: 0%;
     font-size: x-large;
     font-family:'open sans',sans-serif;
-    background-color:bisque ;
+    background-color:rgba(186, 103, 209, 0.586) ;
     background-image:url("./img.jpg") ;
 }
 .header{
@@ -60,8 +60,8 @@ button:hover{
     background: grey;
 }
 .search-bar{
-    height: 7em;
-    padding: 0.5em;
+    height: 1em;
+    padding: .5em;
     width: 300px;
     border: none;
     border-radius: 18px;
