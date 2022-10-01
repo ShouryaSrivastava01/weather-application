@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 body{
     display: flex;
@@ -55,6 +55,7 @@ body{
     height: 1.5em;
     margin: 0.5em;
     border-radius: 15%;
+    align-items: center;
 }
 .temp{
     font-weight: 700;
@@ -71,69 +72,81 @@ button{
 button:hover{
     background: grey;
 }
-.search-bar{
-    height: 7em;
-    padding: 0.5em;
-    width: 300px;
-    border: none;
-    border-radius: 18px;
-    font-family: inherit;
-    font-size: 20px;
+.row {
+  display: flex;
+  align-items: center;
+}
+button:hover {
+  background: grey;
+}
+.search-bar {
+  padding: 0.5rem 1rem;
+  margin-right: 20px;
+  width: 270px;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 20px;
+}
+.search-icon {
+  width: 22px;
+  height: 22px;
+  padding-top: 5px;
 }
 
-#forecast{
-    border: 2px solid red;
+#forecast {
+  border: 2px solid red;
 
-    height: 16em;
-    width: 16em;
-    padding: 0;
-    margin: 0;
-}
-
-#forecast ul{
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    height: 16em;
-}
-#forecast li{
-    position: relative;
-    display: flex;
-    margin: 0;
-    height: 2em;
-    /* border: 1px solid black; */
+  height: 16em;
+  width: 16em;
+  padding: 0;
+  margin: 0;
 }
 
-#days{
-    display: flex;
-    border: 1px solid red;
-    width: 100%;
-    justify-content: space-evenly;
-    position: relative;
+#forecast ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 16em;
+}
+#forecast li {
+  position: relative;
+  display: flex;
+  margin: 0;
+  height: 2em;
+  /* border: 1px solid black; */
 }
 
-#day-weather{
-    display: flex;
-    border: 1px solid yellow;
+#days {
+  display: flex;
+  border: 1px solid red;
+  width: 100%;
+  justify-content: space-evenly;
+  position: relative;
 }
 
-.drop-down{
-    float: right;
-    right: 0px;
-    position: absolute;
-    cursor: pointer;
+#day-weather {
+  display: flex;
+  border: 1px solid yellow;
 }
 
-.details{
-    height: 16em;
-    width: 16em;
-    background-color:#ffe4c4;
-    position: absolute;
-    display: none;
-    z-index: 1;
+.drop-down {
+  float: right;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
 }
-.details img{
-    height: 50px;
+
+.details {
+  height: 16em;
+  width: 16em;
+  background-color: #ffe4c4;
+  position: absolute;
+  display: none;
+  z-index: 1;
+}
+.details img {
+  height: 50px;
 }
