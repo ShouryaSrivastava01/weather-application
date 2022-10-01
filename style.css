@@ -7,13 +7,13 @@ body {
   margin: 0%;
   font-size: x-large;
   font-family: "open sans", sans-serif;
-  background-color: bisque;
+  background-color: hsl(227, 100%, 59%);
   background-image: url("./img.jpg");
 }
 .header {
   display: flex;
   align-items: center;
-  background-color: #b6f3f5;
+  background-color: hsl(227, 100%, 59%);
   font-family: "Press Start 2P", cursive;
 }
 .header-logo {
@@ -23,6 +23,8 @@ body {
 }
 .weather-info {
   display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
@@ -30,13 +32,15 @@ body {
 }
 .card {
   padding: 2em;
-  border-radius: 2em;
+  border-radius: 1em;
   width: 100%;
   max-width: 520px;
-  margin: 1em;
+  
+  margin: 1em 0.5em;
   height: 310px;
-  background: darkgrey;
+  background: #00ADB5;
   color: black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .search {
   display: flex;
@@ -79,12 +83,13 @@ button:hover {
 }
 
 #forecast {
-  border: 2px solid red;
-
+  background-color: #00ADB5;
   height: 16em;
-  width: 16em;
-  padding: 0;
+  width: 24em;
+  padding: 15px;
   margin: 0;
+  border-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 #forecast ul {
@@ -93,7 +98,7 @@ button:hover {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  height: 16em;
+  height: 14em;
 }
 #forecast li {
   position: relative;
@@ -105,15 +110,13 @@ button:hover {
 
 #days {
   display: flex;
-  border: 1px solid red;
   width: 100%;
-  justify-content: space-evenly;
   position: relative;
 }
 
 #day-weather {
   display: flex;
-  border: 1px solid yellow;
+  padding-right: 10%;
 }
 
 .drop-down {
@@ -134,3 +137,4 @@ button:hover {
 .details img {
   height: 50px;
 }
+
