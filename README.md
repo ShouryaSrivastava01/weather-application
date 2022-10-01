@@ -1,7 +1,9 @@
 👋👋 Hello Contributors 
 
 # Weather Application
-One of the basic and core project for learning development. 
+One of the basic and core project for learning development. This is a beginner friendly project to learn the basics of HTML5, CSS3, and Javascript.
+
+This is a link to the live web app - https://shouryasrivastava01.github.io/weather-application/
 
 ## Tech Stack
 ### Frontend:
@@ -23,11 +25,22 @@ User can search weather of a location. Initially using geolocation application w
 ### Weather Forecast
 To display weather forecast of upcoming 7 days/ week
 
-
-
 ## How to Contribute 
 
 Firstly, 🍴 fork the responsitory.
+
+Clone the fork repository
+
+Then you are set to work on the project.
+
+To make a new branch see image below 
+
+```
+// #10 is the issue ticket number and issue name is - fix search bar"
+git checkout -b "#10-fix-search-bar"
+```
+
+You are all set. You can now make changes locally.
 
 ## Option 1
 1. Read the issues thoroughly.
