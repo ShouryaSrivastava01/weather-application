@@ -33,7 +33,7 @@ Clone the fork repository
 
 Then you are set to work on the project.
 
-To make a new branch see image below 
+To make a new branch see code below 
 
 ```
 // #10 is the issue ticket number and issue name is - fix search bar"
