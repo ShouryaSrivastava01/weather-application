@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WEATHER APP</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+        <link rel="stylesheet" href="./style.css" />
+        <!-- <script src="./script.js"></script> -->
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEATHER APP</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
-    <link rel="stylesheet" href="./style.css">
-    <!-- <script src="./script.js"></script> -->
-</head>
-
-<body>
-    <div class="header">
-        <img class="header-logo" src="./assets/logo.png" alt="logo">
-        <p class="header-title">Mausam</p>
-        <img src="assets/GitHub-Mark-120px-plus.png" alt="" srcset="">
-    </div>
-    <div class="weather-info">
-        <div class="card">
-             <div class="search">
-                 <input type="text" class="search-bar" placeholder="Search">
-                 <button> <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg" alt="search" class="search-icon"></button>
-             </div>
-             <div class="weather">
-                <h2 class="city"></h2>
-                <div id="temp"></div>
-                <div class="row">
-                    <div class="description"></div>
-                    <img src="" alt="" class="icon" />
+    <body>
+        <div class="header">
+            <img class="header-logo" src="./assets/logo.png" alt="logo" />
+            <p class="header-title">Mausam</p>
+            <img src="assets/GitHub-Mark-120px-plus.png" alt="" srcset="" />
+        </div>
+        <div class="weather-info">
+            <div class="card">
+                <div class="search">
+                    <input
+                        type="text"
+                        class="search-bar"
+                        placeholder="Search"
+                    />
+                    <button>
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg"
+                            alt="search"
+                            class="search-icon"
+                        />
+                    </button>
                 </div>
-                <div class="humidity"></div>
-                <div class="wind"></div>
+                <div class="weather">
+                    <h2 class="city"></h2>
+                    <div id="temp"></div>
+                    <div class="row">
+                        <div class="description"></div>
+                        <img src="" alt="" class="icon" />
+                    </div>
+                    <div class="humidity"></div>
+                    <div class="wind"></div>
+                </div>
+            </div>
+            <div id="forecast">
+                <ul id="forecast-list">
+                    <li></li>
+                </ul>
             </div>
         </div>
-        <div id="forecast">
-           
-            <ul id="forecast-list">
-                <li>
-                    
-                 </li>
-            </ul>
-        </div>
-    </div>
-</body>
-<script src="./script.js"></script>
-<script src="./forecast.js"></script>
-
+    </body>
+    <script src="./script.js"></script>
+    <script src="./forecast.js"></script>
 </html>
