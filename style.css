@@ -10,17 +10,20 @@ body {
   background-color: hsl(227, 100%, 59%);
   background-image: url("./img.jpg");
 }
+
 .header {
   display: flex;
   align-items: center;
   background-color: hsl(227, 100%, 59%);
   font-family: "Press Start 2P", cursive;
 }
+
 .header-logo {
   height: 50px;
   margin-right: 20px;
   margin-left: 40px;
 }
+
 .weather-info {
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +33,7 @@ body {
   flex-grow: 1;
   border-bottom: 1px solid black;
 }
+
 .card {
   padding: 1em;
   border-radius: 1em;
@@ -41,20 +45,24 @@ body {
   color: black;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 .search {
   display: flex;
   height: 1.5em;
   border-radius: 15%;
   align-items: center;
 }
+
 .row {
   display: flex;
   align-items: center;
 }
+
 .temp {
   font-weight: 700;
   font-size: 30px;
 }
+
 button {
   border: none;
   margin: 0.3em;
@@ -63,9 +71,11 @@ button {
   border-radius: 50%;
   cursor: pointer;
 }
+
 button:hover {
   background: grey;
 }
+
 .search-bar {
   padding: 0.5rem 1rem;
   margin-right: 20px;
@@ -75,6 +85,7 @@ button:hover {
   font-family: inherit;
   font-size: 20px;
 }
+
 .search-icon {
   width: 22px;
   height: 22px;
@@ -99,6 +110,7 @@ button:hover {
   margin: 0;
   height: 14em;
 }
+
 #forecast li {
   position: relative;
   display: flex;
@@ -134,7 +146,22 @@ button:hover {
   display: none;
   z-index: 1;
 }
+
 .details img {
   height: 50px;
 }
 
+<<<<<<< HEAD
+=======
+.footer {
+  margin-top: .2rem;
+  margin-bottom: .2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  background-color: rgb(255, 228, 196);
+}
+>>>>>>> 70037ec380931b1b50590166d88079cc7f0da813
