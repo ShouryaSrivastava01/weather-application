@@ -14,11 +14,25 @@ body {
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #b6f3f5;
   font-family: "Press Start 2P", cursive;
 }
 
+.header-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .header-logo {
+  height: 50px;
+  margin-right: 20px;
+  margin-left: 40px;
+}
+
+.header-github-logo,
+.header-github-logo img {
   height: 50px;
   margin-right: 20px;
   margin-left: 40px;
@@ -149,13 +163,13 @@ button:hover {
 }
 
 .footer {
-  margin-top: .2rem;
-  margin-bottom: .2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   background-color: rgb(255, 228, 196);
 }
