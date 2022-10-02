@@ -27,6 +27,8 @@ To display weather forecast of upcoming 7 days/ week
 
 ## How to Contribute 
 
+Star the repository.
+
 Firstly, 🍴 fork the responsitory.
 
 Clone the fork repository
