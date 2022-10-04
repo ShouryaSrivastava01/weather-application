@@ -37,11 +37,13 @@ console.log("loading javascript")
 
 
     forecast : function(coordinates){
+        
         const {lat,lon} = coordinates;
         fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&units=metric&appid="+this.apikey).then((response)=> response.json()).then(data=>{
             console.log(data)
             let daily= data.daily;
             let html="",temp, weather, date, i=0, forecastHtml="", wind;
+            document.querySelector('.loader').style.display="none"
             daily.forEach(element => {
                 i++;
                 temp=element.temp;
@@ -97,8 +99,6 @@ console.log("loading javascript")
          
             }); 
             document.getElementById("forecast-list").innerHTML= html
-           
-            const detailBtn= document.querySelectorAll('.detail-btn');
            detailBtn.forEach(element=>{
                element.addEventListener('click', ()=>{
                   const box= document.querySelector(`.details[data-id="${element.dataset.key}"]`)
