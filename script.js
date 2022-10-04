@@ -37,7 +37,6 @@ console.log("loading javascript")
 
 
     forecast : function(coordinates){
-        
         const {lat,lon} = coordinates;
         fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&units=metric&appid="+this.apikey).then((response)=> response.json()).then(data=>{
             console.log(data)
