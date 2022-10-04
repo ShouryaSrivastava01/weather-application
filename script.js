@@ -49,7 +49,6 @@ console.log("loading javascript")
                 temp=element.temp;
                 wind=element.wind_speed;
                 weather=element.weather[0];
-                console.log(new Date(daily.sunrise).getDate());
                 date = new Date(element.dt * 1000);
                 const dayNames= ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"]
                 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June",
@@ -78,20 +77,11 @@ console.log("loading javascript")
                  <span> ${parseInt(temp.day)}</span>
                  <img src="/assets/moon.png" alt="night-icon"/>
                  <span> ${parseInt(temp.night)}</span>
-
                  <img src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="icon"/>
                     <span> ${parseInt(temp.min)}/ ${parseInt(temp.max)} </span>
                 </div>
                 <span>${weather.description}</span>
                 <span>${wind}</span>
-                <div>
-                <span>Morning ${temp.morn}</span>
-                <span>Afternoon ${temp.day}</span>
-                <span>Evening ${temp.eve}</span>
-                <span>Night ${temp.night}</span>
-                </div>
-                
-
          <span class="detail-btn" data-key=${i}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
          <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
        </svg></span>
@@ -99,8 +89,10 @@ console.log("loading javascript")
          
             }); 
             document.getElementById("forecast-list").innerHTML= html
+            var detailBtn= document.querySelectorAll('.detail-btn');
            detailBtn.forEach(element=>{
                element.addEventListener('click', ()=>{
+                console.log("clicked")
                   const box= document.querySelector(`.details[data-id="${element.dataset.key}"]`)
                   if(box.style.display=="block")
                             box.style.display="none"

@@ -126,7 +126,6 @@ animation: spin 2s linear infinite;
 #forecast {
   display: flex;
   border: 2px solid red;
-
   height: 16em;
   width: 16em;
   padding: 0;
