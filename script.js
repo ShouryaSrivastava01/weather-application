@@ -74,7 +74,7 @@ console.log("loading javascript")
                 
                  <img src="assets/morning.png" alt="morning-icon"/>
                  <span> ${parseInt(temp.day)}</span>
-                 <img src="/assets/moon.png" alt="night-icon"/>
+                 <img src="assets/moon.png" alt="night-icon"/>
                  <span> ${parseInt(temp.night)}</span>
                  <img src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="icon"/>
                     <span> ${parseInt(temp.min)}/ ${parseInt(temp.max)} </span>
