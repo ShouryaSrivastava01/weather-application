@@ -1,12 +1,32 @@
+//loads the script only after the page is loaded
+
+window.onload= function init(){
+const container = document.getElementById( 'canvas' );
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, canvas: container});
+renderer.setSize( 200, 200);
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera( 75,1 , 0.1, 1000 );
+let rad = 250;
+const geometry = new THREE.SphereGeometry(rad, 32, 32 );
+const material = new THREE.MeshBasicMaterial( {color: 0xffffffff,
+    map:new THREE.TextureLoader().load('./assets/earthmap.jpg')} );
+const sphere = new THREE.Mesh( geometry, material );
+
+controls = new THREE.OrbitControls( camera, renderer.domElement );
+
+camera.position.z = 510;
 
 console.log("loading javascript")
- let weather = 
+ let weather =
  {
     apikey : "32b5ff4c23527855bb8c4e6d97b6250d",
+     x:null,y:null,z:null,
     fetchWeather: function(city){
-        fetch("https://api.openweathermap.org/data/2.5/weather?q=" 
-        +city 
-        + "&units=metric&appid=" 
+        fetch("https://api.openweathermap.org/data/2.5/weather?q="
+        +city
+        + "&units=metric&appid="
         + this.apikey).then((response) => response.json()).then((data) => {
             this.displayWeather(data);
             this.forecast(data.coord);
@@ -28,14 +48,27 @@ console.log("loading javascript")
         document.getElementById("temp").innerHTML=`<span>Temperature : ${temp}</span>`;
         document.querySelector(".humidity").innerHTML=`<span>humidity : ${humidity}</span>`;
         document.querySelector(".wind").innerHTML=`<span>Wind : ${((speed*18)/5).toFixed(2)} km/h</span>`;
+
+        console.log('this data is here'+lon);
+        var blobGeo = new THREE.SphereGeometry(20, 32, 32 );
+        var mat = new THREE.MeshBasicMaterial( {color: 0xff0000});
+        blob = new THREE.Mesh(blobGeo,mat);
+        var rad = 250;
+        var phi = (90-lat)*(Math.PI/180),
+            theta = (lon+180)*(Math.PI/180),
+            x = -((rad) * Math.sin(phi)*Math.cos(theta)),
+            z = ((rad) * Math.sin(phi)*Math.sin(theta)),
+            y = ((rad) * Math.cos(phi));
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.blit();
+        scene.add(blob);
     },
-    search: function(){
-        this.fetchWeather(document.querySelector(".search-bar").value);
-        console.log(document.querySelector(".search-bar").value)
+     search: function(){
+         this.fetchWeather(document.querySelector(".search-bar").value);
+         console.log(document.querySelector(".search-bar").value)
     },
-
-
-
     forecast : function(coordinates){
         const {lat,lon} = coordinates;
         fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&units=metric&appid="+this.apikey).then((response)=> response.json()).then(data=>{
@@ -53,7 +86,7 @@ console.log("loading javascript")
                 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June",
   "July", "Aug", "Sept", "Oct", "Nov", "Dec"
 ];
-              
+
                 html+=`<li>
             <span style="width: 30%;">${dayNames[date.getDay()]} ${monthNames[date.getMonth()]} ${date.getDate()}</span>
             <div id="days">
@@ -66,12 +99,12 @@ console.log("loading javascript")
                 <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
               </svg></span>
                </div>
-            </div> 
+            </div>
          </li>
 
        <div class="details" data-id=${i}>
        <div id="day-weather">
-                
+
                  <img src="assets/morning.png" alt="morning-icon"/>
                  <span> ${parseInt(temp.day)}</span>
                  <img src="/assets/moon.png" alt="night-icon"/>
@@ -85,8 +118,7 @@ console.log("loading javascript")
          <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
        </svg></span>
          </div>`
-         
-            }); 
+            });
             document.getElementById("forecast-list").innerHTML= html
             var detailBtn= document.querySelectorAll('.detail-btn');
            detailBtn.forEach(element=>{
@@ -98,12 +130,6 @@ console.log("loading javascript")
                 else box.style.display="block"
                })
            })
-            
-            
-            
-            
-            
-            
         })
     },
     geoweather: function(){
@@ -112,16 +138,21 @@ console.log("loading javascript")
         navigator.geolocation.getCurrentPosition((position)=>{
             fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=`+this.apikey).then((response)=> response.json()).then(data=>this.fetchWeather(data.name))
         })
-    else 
+    else
     alert("no kr gsp")
     console.log(data)
+    },
+     blit: function(){
+        var [x,y,z]= [this.x, this.y, this.z];
+         blob.position.set(x,y,z);
     }
-   
-    
-
 };
- weather.geoweather();
-
+scene.add(sphere);
+const animate = function () {
+    requestAnimationFrame( animate );
+    renderer.render( scene, camera );
+};
+animate();
 
 document.querySelector(".search button").addEventListener("click",()=>{
     weather.search();
@@ -134,4 +165,4 @@ document.querySelector(".search-bar").addEventListener("keyup", function(event){
     }
 });
 
-
+};
