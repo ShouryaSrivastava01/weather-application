@@ -97,6 +97,26 @@ button:hover {
   font-size: 20px;
 }
 
+.loader {
+  border: 9px solid  #a9a9a9;;
+border-radius: 39%;
+width: 50px;
+height: 50px;
+-webkit-animation: spin 2s linear infinite;
+animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
 .search-icon {
   width: 22px;
   height: 22px;
@@ -104,12 +124,15 @@ button:hover {
 }
 
 #forecast {
+  display: flex;
   border: 2px solid red;
 
   height: 16em;
   width: 16em;
   padding: 0;
   margin: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 #forecast ul {
@@ -119,6 +142,7 @@ button:hover {
   padding: 0;
   margin: 0;
   height: 16em;
+  
 }
 
 #forecast li {
