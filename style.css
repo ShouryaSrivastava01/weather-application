@@ -12,11 +12,11 @@ body {
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #b6f3f5;
-  font-family: "Press Start 2P", cursive;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000a2d00;
+    font-family: "Press Start 2P", cursive;
 }
 
 .header-main {
@@ -171,5 +171,4 @@ button:hover {
   font-family: "Inter", sans-serif;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  background-color: rgb(255, 228, 196);
 }
