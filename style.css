@@ -6,16 +6,14 @@ body {
     margin: 0%;
     font-size: x-large;
     font-family: "open sans", sans-serif;
-    background-color: bisque;
-    background-image: url("./img.jpg");
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #b6f3f5;
     font-family: "Press Start 2P", cursive;
+    color: white;
 }
 
 .header-main {
@@ -182,7 +180,6 @@ button:hover {
 .details {
     height: 16em;
     width: 16em;
-    background-color: #ffe4c4;
     position: absolute;
     display: none;
     z-index: 1;
