@@ -46,7 +46,7 @@ body {
 .card {
     width: 400px;
     height: 350px;
-    background-color: #ebeded;
+    background-color: #44809e45;
     border-radius: 30px;
     padding: 25px;
     padding-right: 30px;
@@ -95,12 +95,12 @@ button:hover {
 }
 
 .loader {
-    border: 9px solid #a9a9a9;
-    border-radius: 39%;
-    width: 50px;
-    height: 50px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
+  border: 6px solid #256585;
+  border-radius: 39%;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
 
@@ -132,13 +132,15 @@ button:hover {
 
 #forecast {
     display: flex;
-    border: 2px solid red;
+    background-color: #44809e45;
     height: 16em;
     width: 16em;
     padding: 0;
     margin: 0;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 31px 35px -26px #000000;
+    border-radius: 30px;
 }
 
 #forecast ul {
