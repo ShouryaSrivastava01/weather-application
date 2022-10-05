@@ -1,174 +1,204 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0%;
-  font-size: x-large;
-  font-family: "open sans", sans-serif;
-  background-color: bisque;
-  background-image: url("./img.jpg");
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0%;
+    font-size: x-large;
+    font-family: "open sans", sans-serif;
+    background-color: bisque;
+    background-image: url("./img.jpg");
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000a2d00;
+    background-color: #b6f3f5;
     font-family: "Press Start 2P", cursive;
 }
 
 .header-main {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .header-logo {
-  height: 50px;
-  margin-right: 20px;
-  margin-left: 40px;
+    height: 50px;
+    margin-right: 20px;
+    margin-left: 40px;
 }
 
 .header-github-logo,
 .header-github-logo img {
-  height: 50px;
-  margin-right: 20px;
-  margin-left: 40px;
+    height: 50px;
+    margin-right: 20px;
+    margin-left: 40px;
 }
 
 .weather-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    border-bottom: 1px solid black;
 }
-
 .card {
-  padding: 2em;
-  border-radius: 2em;
-  width: 100%;
-  max-width: 520px;
-  margin: 1em;
-  height: 310px;
-  background: darkgrey;
-  color: black;
+    width: 400px;
+    height: 350px;
+    background-color: #ebeded;
+    border-radius: 30px;
+    padding: 25px;
+    padding-right: 30px;
+    box-shadow: 0px 31px 35px -26px #000000;
+    display: inline-block;
 }
 
 .search {
-  display: flex;
-  height: 1.5em;
-  border-radius: 15%;
-  align-items: center;
+    display: flex;
+    height: 1.5em;
+    border-radius: 15%;
+    align-items: center;
 }
 
 .row {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .temp {
-  font-weight: 700;
-  font-size: 30px;
+    font-weight: 700;
+    font-size: 30px;
 }
 
 button {
-  border: none;
-  margin: 0.3em;
-  height: 3.1em;
-  width: 3.1em;
-  border-radius: 50%;
-  cursor: pointer;
+    border: none;
+    margin: 0.3em;
+    height: 3.1em;
+    width: 3.1em;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 button:hover {
-  background: grey;
+    background: grey;
 }
 
 .search-bar {
-  padding: 0.5rem 1rem;
-  margin-right: 20px;
-  width: 270px;
-  border: none;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 20px;
+    padding: 0.5rem 1rem;
+    margin-right: 20px;
+    width: 80%;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 20px;
+}
+
+.loader {
+    border: 9px solid #a9a9a9;
+    border-radius: 39%;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+
+/* Safari */
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .search-icon {
-  width: 22px;
-  height: 22px;
-  padding-top: 5px;
+    width: 22px;
+    height: 22px;
+    padding-top: 5px;
 }
 
 #forecast {
-  border: 2px solid red;
-
-  height: 16em;
-  width: 16em;
-  padding: 0;
-  margin: 0;
+    display: flex;
+    border: 2px solid red;
+    height: 16em;
+    width: 16em;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 #forecast ul {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  height: 16em;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 16em;
 }
 
 #forecast li {
-  position: relative;
-  display: flex;
-  margin: 0;
-  height: 2em;
-  /* border: 1px solid black; */
+    position: relative;
+    display: flex;
+    margin: 0;
+    height: 2em;
 }
 
 #days {
-  display: flex;
-  border: 1px solid red;
-  width: 100%;
-  justify-content: space-evenly;
-  position: relative;
+    display: flex;
+    border: 1px solid red;
+    width: 100%;
+    justify-content: space-evenly;
+    position: relative;
 }
 
 #day-weather {
-  display: flex;
-  border: 1px solid yellow;
+    display: flex;
+    border: 1px solid yellow;
 }
 
 .drop-down {
-  float: right;
-  right: 0px;
-  position: absolute;
-  cursor: pointer;
+    float: right;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
 }
 
 .details {
-  height: 16em;
-  width: 16em;
-  background-color: #ffe4c4;
-  position: absolute;
-  display: none;
-  z-index: 1;
+    height: 16em;
+    width: 16em;
+    background-color: #ffe4c4;
+    position: absolute;
+    display: none;
+    z-index: 1;
 }
 
 .details img {
-  height: 50px;
+    height: 50px;
 }
 
 .footer {
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Inter", sans-serif;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
 }

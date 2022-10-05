@@ -39,12 +39,13 @@ console.log("loading javascript")
     forecast : function(coordinates){
         const {lat,lon} = coordinates;
         fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&units=metric&appid="+this.apikey).then((response)=> response.json()).then(data=>{
-            // console.log(data.current)
+            console.log(data)
             let daily= data.daily;
             let html="",temp, weather, date, i=0, forecastHtml="", wind;
+            document.querySelector('.loader').style.display="none"
             daily.forEach(element => {
                 i++;
-                temp=element.temp
+                temp=element.temp;
                 wind=element.wind_speed;
                 weather=element.weather[0];
                 date = new Date(element.dt * 1000);
@@ -73,9 +74,8 @@ console.log("loading javascript")
                 
                  <img src="assets/morning.png" alt="morning-icon"/>
                  <span> ${parseInt(temp.day)}</span>
-                 <img src="/assets/moon.png" alt="night-icon"/>
+                 <img src="assets/moon.png" alt="night-icon"/>
                  <span> ${parseInt(temp.night)}</span>
-
                  <img src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="icon"/>
                     <span> ${parseInt(temp.min)}/ ${parseInt(temp.max)} </span>
                 </div>
@@ -88,10 +88,10 @@ console.log("loading javascript")
          
             }); 
             document.getElementById("forecast-list").innerHTML= html
-           
-            const detailBtn= document.querySelectorAll('.detail-btn');
+            var detailBtn= document.querySelectorAll('.detail-btn');
            detailBtn.forEach(element=>{
                element.addEventListener('click', ()=>{
+                console.log("clicked")
                   const box= document.querySelector(`.details[data-id="${element.dataset.key}"]`)
                   if(box.style.display=="block")
                             box.style.display="none"
