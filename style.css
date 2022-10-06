@@ -41,8 +41,8 @@ body {
     align-items: center;
     flex-grow: 1;
     flex-wrap: wrap;
-    border-bottom: 1px solid black;
 }
+
 .card {
     width: 400px;
     height: 350px;
@@ -95,12 +95,12 @@ button:hover {
 }
 
 .loader {
-  border: 6px solid #256585;
-  border-radius: 39%;
-  width: 30px;
-  height: 30px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
+    border: 6px solid #256585;
+    border-radius: 39%;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
 }
 
 
@@ -177,6 +177,7 @@ button:hover {
     right: 0px;
     position: absolute;
     cursor: pointer;
+    /* display: inline-flex; */
 }
 
 .details {
