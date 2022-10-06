@@ -161,7 +161,7 @@ button:hover {
 
 #days {
     display: flex;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     justify-content: space-evenly;
     position: relative;
@@ -169,7 +169,7 @@ button:hover {
 
 #day-weather {
     display: flex;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
 }
 
 .drop-down {
