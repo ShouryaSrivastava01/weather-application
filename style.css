@@ -159,6 +159,10 @@ button:hover {
     height: 2em;
 }
 
+#forecast li span{
+    width: 40%;
+}
+
 #days {
     display: flex;
     border: 1px solid red;
@@ -187,8 +191,20 @@ button:hover {
     z-index: 1;
 }
 
+.mystyle{
+    display: flex;
+    background-color: red;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .details img {
     height: 50px;
+}
+
+.detail-btn:hover{
+    cursor: pointer;
 }
 
 .footer {

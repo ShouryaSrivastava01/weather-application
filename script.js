@@ -55,7 +55,7 @@ console.log("loading javascript")
 ];
               
                 html+=`<li>
-            <span style="width: 30%;">${dayNames[date.getDay()]} ${monthNames[date.getMonth()]} ${date.getDate()}</span>
+            <span>${dayNames[date.getDay()]}, ${monthNames[date.getMonth()]} ${date.getDate()}</span>
             <div id="days">
                 <div id="day-weather">
                  <img src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="icon"/>
@@ -90,12 +90,18 @@ console.log("loading javascript")
             document.getElementById("forecast-list").innerHTML= html
             var detailBtn= document.querySelectorAll('.detail-btn');
            detailBtn.forEach(element=>{
+            var open = false;
                element.addEventListener('click', ()=>{
                 console.log("clicked")
                   const box= document.querySelector(`.details[data-id="${element.dataset.key}"]`)
-                  if(box.style.display=="block")
-                            box.style.display="none"
-                else box.style.display="block"
+                    if(open==false){
+                        box.classList.add('mystyle');
+                        open = true;
+                    }
+                    else {
+                        box.classList.remove('mystyle')
+                        open = false
+                    }
                })
            })
             
