@@ -203,7 +203,7 @@
                     
                     .detail-open {
                         display: flex;
-                        background-color: #9bd9f1;
+                        background-image: linear-gradient(#9644c7, #bc5d8b);
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
