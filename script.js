@@ -94,13 +94,12 @@ let weather = {
             detailBtn.forEach(element => {
                 element.addEventListener('click', () => {
                     const box = document.querySelector(`.details[data-id="${element.dataset.key}"]`)
-                    if(!opened) {
+                    if (!opened) {
                         box.classList.add('detail-open');
-                        opened=true;
-                    }
-                    else{
+                        opened = true;
+                    } else {
                         box.classList.remove('detail-open');
-                        opened= false;
+                        opened = false;
                     }
                 })
             })
