@@ -1,5 +1,4 @@
                     @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
                     body {
                         display: flex;
                         flex-direction: column;
@@ -8,7 +7,7 @@
                         font-size: x-large;
                         font-family: "open sans", sans-serif;
                     }
-
+                    
                     .header {
                         display: flex;
                         align-items: center;
@@ -16,26 +15,26 @@
                         font-family: "Press Start 2P", cursive;
                         color: white;
                     }
-
+                    
                     .header-main {
                         display: flex;
                         flex-direction: row;
                         align-items: center;
                     }
-
+                    
                     .header-logo {
                         height: 50px;
                         margin-right: 20px;
                         margin-left: 40px;
                     }
-
+                    
                     .header-github-logo,
                     .header-github-logo img {
                         height: 50px;
                         margin-right: 20px;
                         margin-left: 40px;
                     }
-
+                    
                     .weather-info {
                         display: flex;
                         justify-content: space-evenly;
@@ -43,7 +42,7 @@
                         flex-grow: 1;
                         flex-wrap: wrap;
                     }
-
+                    
                     .card {
                         width: 400px;
                         height: 350px;
@@ -54,24 +53,24 @@
                         box-shadow: 0px 31px 35px -26px #000000;
                         display: inline-block;
                     }
-
+                    
                     .search {
                         display: flex;
                         height: 1.5em;
                         border-radius: 15%;
                         align-items: center;
                     }
-
+                    
                     .row {
                         display: flex;
                         align-items: center;
                     }
-
+                    
                     .temp {
                         font-weight: 700;
                         font-size: 30px;
                     }
-
+                    
                     button {
                         border: none;
                         margin: 0.3em;
@@ -80,11 +79,11 @@
                         border-radius: 50%;
                         cursor: pointer;
                     }
-
+                    
                     button:hover {
                         background: grey;
                     }
-
+                    
                     .search-bar {
                         padding: 0.5rem 1rem;
                         margin-right: 20px;
@@ -94,7 +93,7 @@
                         font-family: inherit;
                         font-size: 20px;
                     }
-
+                    
                     .loader {
                         border: 6px solid #256585;
                         border-radius: 39%;
@@ -103,35 +102,32 @@
                         -webkit-animation: spin 2s linear infinite;
                         animation: spin 2s linear infinite;
                     }
-
                     /* Safari */
-
+                    
                     @-webkit-keyframes spin {
                         0% {
                             -webkit-transform: rotate(0deg);
                         }
-
                         100% {
                             -webkit-transform: rotate(360deg);
                         }
                     }
-
+                    
                     @keyframes spin {
                         0% {
                             transform: rotate(0deg);
                         }
-
                         100% {
                             transform: rotate(360deg);
                         }
                     }
-
+                    
                     .search-icon {
                         width: 22px;
                         height: 22px;
                         padding-top: 5px;
                     }
-
+                    
                     #forecast {
                         display: flex;
                         background-color: #44809e45;
@@ -144,7 +140,7 @@
                         border-radius: 30px;
                         padding: 1em;
                     }
-
+                    
                     #forecast ul {
                         display: flex;
                         flex-direction: column;
@@ -153,34 +149,34 @@
                         margin: 0;
                         height: 16em;
                     }
-
+                    
                     #forecast li {
                         position: relative;
                         display: flex;
                         margin: 0;
                         height: 2em;
                     }
-
+                    
                     #forecast li span {
                         width: 40%;
                     }
-
+                    
                     #days {
                         display: flex;
                         /* border: 1px solid red; */
                         justify-content: space-evenly;
                         position: relative;
                     }
-
+                    
                     #days span {
                         font-size: 20px;
                     }
-
+                    
                     #day-weather {
                         display: flex;
                         /* border: 1px solid yellow; */
                     }
-
+                    
                     .drop-down {
                         float: right;
                         right: 0px;
@@ -188,7 +184,7 @@
                         cursor: pointer;
                         /* display: inline-flex; */
                     }
-
+                    
                     .details {
                         height: 16em;
                         width: 16em;
@@ -196,21 +192,24 @@
                         display: none;
                         z-index: 1;
                     }
-
+                    
                     .details img {
                         height: 50px;
                     }
-
-                    .detail-btn:hover{
+                    
+                    .detail-btn:hover {
                         cursor: pointer;
                     }
-
-                    .detail-open{
+                    
+                    .detail-open {
                         display: flex;
-                        background-color: red;
-                        /* add your style here */
+                        background-color: #9bd9f1;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        height: 390px;
                     }
-
+                    
                     .footer {
                         margin-top: 0.2rem;
                         margin-bottom: 0.2rem;
