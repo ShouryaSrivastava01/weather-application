@@ -90,13 +90,18 @@ let weather = {
             });
             document.getElementById("forecast-list").innerHTML = html
             var detailBtn = document.querySelectorAll('.detail-btn');
+            var opened = false;
             detailBtn.forEach(element => {
                 element.addEventListener('click', () => {
-                    console.log("clicked")
                     const box = document.querySelector(`.details[data-id="${element.dataset.key}"]`)
-                    if (box.style.display == "block")
-                        box.style.display = "none"
-                    else box.style.display = "block"
+                    if(!opened) {
+                        box.classList.add('detail-open');
+                        opened=true;
+                    }
+                    else{
+                        box.classList.remove('detail-open');
+                        opened= false;
+                    }
                 })
             })
 
