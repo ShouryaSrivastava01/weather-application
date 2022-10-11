@@ -52,19 +52,11 @@ let weather = {
                 date = new Date(element.dt * 1000);
                 const dayNames = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"]
                 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June",
-<<<<<<< HEAD
-  "July", "Aug", "Sept", "Oct", "Nov", "Dec"
-];
-              
-                html+=`<li>
-            <span>${dayNames[date.getDay()]}, ${monthNames[date.getMonth()]} ${date.getDate()}</span>
-=======
                     "July", "Aug", "Sept", "Oct", "Nov", "Dec"
                 ];
 
                 html += `<li>
             <span >${dayNames[date.getDay()]}, ${monthNames[date.getMonth()]} ${date.getDate()}</span>
->>>>>>> 80c1b0dcfc2376fa3280aa4bb4ba71412fbbcaa7
             <div id="days">
                 <div id="day-weather">
                  <img src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="icon"/>
@@ -94,33 +86,6 @@ let weather = {
          <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
        </svg></span>
          </div>`
-<<<<<<< HEAD
-         
-            }); 
-            document.getElementById("forecast-list").innerHTML= html
-            var detailBtn= document.querySelectorAll('.detail-btn');
-           detailBtn.forEach(element=>{
-            var open = false;
-               element.addEventListener('click', ()=>{
-                console.log("clicked")
-                  const box= document.querySelector(`.details[data-id="${element.dataset.key}"]`)
-                    if(open==false){
-                        box.classList.add('mystyle');
-                        open = true;
-                    }
-                    else {
-                        box.classList.remove('mystyle')
-                        open = false
-                    }
-               })
-           })
-            
-            
-            
-            
-            
-            
-=======
 
             });
             document.getElementById("forecast-list").innerHTML = html
@@ -140,7 +105,6 @@ let weather = {
 
 
 
->>>>>>> 80c1b0dcfc2376fa3280aa4bb4ba71412fbbcaa7
         })
     },
     geoweather: function() {
