@@ -175,6 +175,8 @@
                     #day-weather {
                         display: flex;
                         /* border: 1px solid yellow; */
+                        justify-content: space-around;
+                        width:100%;
                     }
                     
                     .drop-down {
@@ -205,7 +207,7 @@
                         display: flex;
                         background-image: linear-gradient(#9644c7, #bc5d8b);
                         flex-direction: column;
-                        justify-content: center;
+                        justify-content: space-around;
                         align-items: center;
                         height: 390px;
                     }
