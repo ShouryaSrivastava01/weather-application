@@ -50,66 +50,82 @@ let weather = {
                 wind = element.wind_speed;
                 weather = element.weather[0];
                 date = new Date(element.dt * 1000);
-                const dayNames = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"]
-                const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June",
-                    "July", "Aug", "Sept", "Oct", "Nov", "Dec"
+                const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+                const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
                 ];
 
-                html += `<li>
-            <span >${dayNames[date.getDay()]}, ${monthNames[date.getMonth()]} ${date.getDate()}</span>
-            <div id="days">
-                <div id="day-weather">
-                 <img src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="icon"/>
-                    <span> ${parseInt(temp.min)}/${parseInt(temp.max)} </span>
-                </div>
+                html += `<li class="card-item">
+            <div class="day-section">
+              ${dayNames[date.getDay()]} ${
+              monthNames[date.getMonth()]
+            } ${date.getDate()}
+            </div>
+            <div class="img-section">
+              <img src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="icon"/>
+              <span> ${parseInt(temp.min)}/ ${parseInt(temp.max)} </span>
+            </div>
+         
+            <div class="info-section">
                 <span>${weather.description}</span>
-                <span class="detail-btn" data-key=${i}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-              </svg></span>
+                <span class="detail-btn" data-key=${i}>
+
+                <span class="down">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg>
+                </span>
+
+                <span class="up hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                    <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                  </svg>
+                </span>
+               
+                </span>
                </div>
             </div> 
          </li>
 
-       <div class="details" data-id=${i}>
-       <div id="day-weather">
-                
-                 <img src="assets/morning.png" alt="morning-icon"/>
-                 <span> ${parseInt(temp.day)}</span>
-                 <img src="assets/moon.png" alt="night-icon"/>
-                 <span> ${parseInt(temp.night)}</span>
-                 <img src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="icon"/>
-                    <span> ${parseInt(temp.min)}/ ${parseInt(temp.max)} </span>
-                </div>
-                <span>${weather.description}</span>
-                <span>${wind}</span>
-         <span class="detail-btn" data-key=${i}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
-         <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
-       </svg></span>
-         </div>`
+       <div class="details hidden" data-id=${i}>
+        <div class="img-section">
+          <img src="assets/morning.png" alt="morning-icon"/>
+            <span> ${parseInt(temp.day)}</span>
+        </div>
+        <div class="img-section">
+          <img src="assets/moon.png" alt="night-icon"/>
+            <span> ${parseInt(temp.night)}</span>
+       </div>
+      <div class="img-section">
+        <img src="https://openweathermap.org/img/wn/${weather.icon}.png" alt="icon"/>
+       <span> ${parseInt(temp.min)}/ ${parseInt(temp.max)} </span>
+      </div>
+       </div>
+       </div>`
 
             });
             document.getElementById("forecast-list").innerHTML = html
             var detailBtn = document.querySelectorAll('.detail-btn');
             var opened = false;
-            detailBtn.forEach(element => {
-                element.addEventListener('click', () => {
-                    const box = document.querySelector(`.details[data-id="${element.dataset.key}"]`)
-                    if (!opened) {
-                        box.classList.add('detail-open');
-                        opened = true;
-                    } else {
-                        box.classList.remove('detail-open');
-                        opened = false;
-                    }
-                })
-            })
-
-
-
-
-
-
-        })
+            detailBtn.forEach((element) => {
+              element.addEventListener("click", (event) => {
+                const box = document.querySelector(
+                  `.details[data-id="${element.dataset.key}"]`
+                );
+                const mainSection = event.target.parentElement.parentElement.parentElement;
+                mainSection.getElementsByClassName('down')[0].classList.add('hidden')
+                if (box.classList.contains("hidden")) {
+                    mainSection.getElementsByClassName('down')[0].classList.add('hidden');
+                    mainSection.getElementsByClassName('up')[0].classList.remove('hidden');
+                    box.classList.remove("hidden");
+                } else {
+                    box.classList.add("hidden");
+                    mainSection.getElementsByClassName('up')[0].classList.add('hidden');
+                    mainSection.getElementsByClassName('down')[0].classList.remove('hidden');
+                }
+              });
+            });
+          });
     },
     geoweather: function() {
         const data = [];

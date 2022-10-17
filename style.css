@@ -95,6 +95,8 @@
                     }
                     
                     .loader {
+                        margin-top: 20%;
+                        margin-left: 46%;
                         border: 6px solid #256585;
                         border-radius: 39%;
                         width: 30px;
@@ -129,10 +131,9 @@
                     }
                     
                     #forecast {
-                        display: flex;
                         background-color: #44809e45;
-                        height: 16em;
-                        width: 18em;
+                        min-height: 16em;
+                        min-width: 30em;
                         margin: 0;
                         justify-content: center;
                         align-items: center;
@@ -147,7 +148,7 @@
                         list-style-type: none;
                         padding: 0;
                         margin: 0;
-                        height: 16em;
+                        /* height: 16em; */
                     }
                     
                     #forecast li {
@@ -155,6 +156,30 @@
                         display: flex;
                         margin: 0;
                         height: 2em;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    .img-section {
+                        display: flex;
+                        align-items: center;
+                        width: 30%;
+                    }
+                    .day-section {
+                        width: 30%;
+                    }
+                    .info-section {
+                        width: 34%;
+                        text-align: right;
+                    }
+                    .card-item {
+                        /* Add shadows to create the "card" effect */
+                        box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.2);
+                        transition: 0.3s;
+                        padding: 7px;
+                    }
+                    .card-item:hover {
+                        box-shadow: 0 0px 16px 0 rgba(0, 0, 0, 0.2);
                     }
                     
                     #forecast li span {
@@ -164,6 +189,7 @@
                     #days {
                         display: flex;
                         /* border: 1px solid red; */
+                        width: 100%;
                         justify-content: space-evenly;
                         position: relative;
                     }
@@ -175,8 +201,8 @@
                     #day-weather {
                         display: flex;
                         /* border: 1px solid yellow; */
-                        justify-content: space-around;
-                        width:100%;
+                        /* justify-content: space-around; */
+                        /* width:100%; */
                     }
                     
                     .drop-down {
@@ -188,15 +214,18 @@
                     }
                     
                     .details {
-                        height: 16em;
-                        width: 16em;
-                        position: absolute;
-                        display: none;
-                        z-index: 1;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: end;
+                        padding: 1em;
+                        border-bottom: 1px solid #544c4c;
                     }
                     
                     .details img {
                         height: 50px;
+                    }
+                    .hidden {
+                        display: none;
                     }
                     
                     .detail-btn:hover {
@@ -213,7 +242,7 @@
                     }
                     
                     .footer {
-                        margin-top: 0.2rem;
+                        margin-top: 1rem;
                         margin-bottom: 0.2rem;
                         display: flex;
                         align-items: center;
