@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <script defer src="scriptAutocomplete.js" ></script>
     <!-- <script src="./script.js"></script> -->
 </head>
 
@@ -27,7 +28,8 @@
     <div class="weather-info">
         <div class="card">
             <div class="search">
-                <input type="text" class="search-bar" placeholder="Search">
+                <input type="text" class="search-bar" placeholder="Search" list="datalist" onkeyup="autoComplete(this.value)">
+                <datalist id="datalist"></datalist>
                 <button> <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg"
                         alt="search" class="search-icon"></button>
             </div>
