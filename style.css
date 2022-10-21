@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 body {
   display: flex;
   flex-direction: column;
@@ -44,9 +45,9 @@ body {
   flex-wrap: wrap;
 }
 
-.weather-desc{
-    width: auto;
-    padding: 0px 12px;
+.weather-desc {
+  width: auto;
+  padding: 0px 12px;
 }
 
 .card {
@@ -98,34 +99,6 @@ button:hover {
   border-radius: 8px;
   font-family: inherit;
   font-size: 20px;
-}
-
-.loader {
-  border: 6px solid #256585;
-  border-radius: 39%;
-  width: 30px;
-  height: 30px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-}
-/* Safari */
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 .search-icon {
@@ -185,7 +158,7 @@ button:hover {
   width: 100%;
 }
 
-#day-weather img{
+#day-weather img {
   padding: 0px 10px;
 }
 
