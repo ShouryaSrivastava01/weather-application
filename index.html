@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto&display=swap" rel="stylesheet">
-    <script defer src="scriptAutocomplete.js" ></script>
-    <!-- <script src="./script.js"></script> -->
+    <script defer src="scriptAutocomplete.js"></script>
+    <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
 </head>
 
 <body style="background-image: linear-gradient(#8f00ffe3, #ff0000a1);">
@@ -21,14 +21,16 @@
             <img class="header-logo" src="./assets/logo.png" alt="logo">
             <p class="header-title">Mausam</p>
         </div>
-        <a class="header-github-logo" href="https://github.com/ShouryaSrivastava01/weather-application/" target="_blank">
+        <a class="header-github-logo" href="https://github.com/ShouryaSrivastava01/weather-application/"
+            target="_blank">
             <img src="assets/github_logogit .png" alt="Github Logo" srcset="">
         </a>
     </div>
     <div class="weather-info">
         <div class="card">
             <div class="search">
-                <input type="text" class="search-bar" placeholder="Search" list="datalist" onkeyup="autoComplete(this.value)">
+                <input type="text" class="search-bar" placeholder="Search" list="datalist"
+                    onkeyup="autoComplete(this.value)">
                 <datalist id="datalist"></datalist>
                 <button> <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg"
                         alt="search" class="search-icon"></button>
@@ -45,8 +47,14 @@
             </div>
         </div>
         <div id="forecast">
-            <div class="loader"></div>
+            <div class="loader">
+                <lord-icon src="https://cdn.lordicon.com/qtiwxsuo.json" trigger="loop"
+                    colors="primary:#4be1ec,secondary:#ffffff" stroke="90" style="width:100px;height:100px">
+                </lord-icon>
+            </div>
+
             <ul id="forecast-list">
+
                 <li>
 
                 </li>
